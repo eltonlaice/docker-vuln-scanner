@@ -2,7 +2,7 @@ name: CI - Docker Vulnerability Scanner
 
 on:
   push:
-    branches: [main]
+    branches: [develop, master]
   workflow_dispatch:
 
 jobs:
