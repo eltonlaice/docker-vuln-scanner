@@ -1,0 +1,27 @@
+name: CI - Docker Vulnerability Scanner
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Build Docker image
+      run: docker build -t vuln-scanner .
+
+    - name: Run scanner
+      run: |
+        docker run --rm -v $(pwd):/data vuln-scanner --images-file /data/images.txt --output /data/vulnerabilities_report.csv
+
+    - name: Upload CSV report
+      uses: actions/upload-artifact@v3
+      with:
+        name: vulnerabilities-report
+        path: vulnerabilities_report.csv
