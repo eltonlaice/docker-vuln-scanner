@@ -21,7 +21,7 @@ jobs:
         docker run --rm -v $(pwd):/data vuln-scanner --images-file /data/images.txt --output /data/vulnerabilities_report.csv
 
     - name: Upload CSV report
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: vulnerabilities-report
         path: vulnerabilities_report.csv
