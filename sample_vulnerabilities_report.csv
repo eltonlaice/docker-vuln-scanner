@@ -1,0 +1,6 @@
+Package Name,Severity,Version,Fixed In Version,Description,CVE ID,Source
+libssl1.1,LOW,1.1.1f-1ubuntu2,1.1.1f-1ubuntu2.20,SSL certificate validation issue,CVE-2023-12345,tykio/tyk-gateway;tykio/tyk-dashboard
+openssl,MEDIUM,1.1.1f-1ubuntu2,1.1.1f-1ubuntu2.19,Potential denial of service in TLS handshake,CVE-2023-67890,tykio/tyk-gateway
+redis,HIGH,6.0.6-1,6.0.7,Remote code execution in Redis server,CVE-2022-54321,tykio/tyk-dashboard
+libc6,CRITICAL,2.31-0ubuntu9.2,2.31-0ubuntu9.9,Buffer overflow in glibc,CVE-2021-98765,tykio/tyk-gateway;tykio/tyk-dashboard
+zlib1g,LOW,1:1.2.11.dfsg-2ubuntu1.2,1:1.2.11.dfsg-2ubuntu1.5,Compression algorithm vulnerability,CVE-2023-45678,tykio/tyk-gateway
