@@ -1,0 +1,8 @@
+# Generated CSV reports (excluding the sample report)
+vulnerabilities_report.csv
+custom_report.csv
+
+# Local Codespaces and VS Code configuration files
+.vscode/
+.devcontainer/devcontainer.lock
+codespaces.json
